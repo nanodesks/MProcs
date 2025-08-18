@@ -18,7 +18,7 @@ print("[This saves to MProcs-logs.txt]")
 print()
 print(file=z)
 def version():
-    title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-3.9.0.4 by A.A.P.L."
+    title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-4.0.1.1 by A.A.P.L."
     title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
     title3 = " All Rights Reserved - Medicci.ca -"
     cdt = datetime.datetime.now()
@@ -122,7 +122,7 @@ def commands():
     print()
     print(" version | [blank input] for nano | note / journal / save | search")
     print()
-    print(" | message [lh], [echo], [fuzz], alerts, Patient Simu, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator [oscill], Medicals (M), Earth Science (SCI), psychology (psyc), biology (B), chemistry (ch), legal terms (Law), change username/initials [initials/username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, MedProc AI [MAI], frames [fps], frames search [fsearch], burner-start [burn], KIOMAI [kiomai], amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard") 
+    print(" | message [lh], [echo], [fuzz], alerts, Patient Simu, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator [oscill], Medicals (M), Earth Science (SCI), psychology (psyc), biology (B), chemistry (ch), legal terms (Law), change username/initials [initials/username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, MedProc AI [MAI], frames [fps], frames search [fsearch], burner-start [burn], KIOMAI [kiomai], amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, call, degree/majors") 
     print()
     print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, stats, progress, collections, football, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, monitor-search [msearch], acad-search [asearch]")
 
@@ -3656,11 +3656,81 @@ def burner():
         except KeyboardInterrupt:
             print("\nStopped by user.")
 
+def call():
+    maroon = "^m^"
+    nano = (diction)
+    title = input("call name: ")
+    c = open("call-logs.txt", "a", buffering=1)
+    ct = datetime.datetime.now()
+    monitor = "call-start:"
+    print(usr, monitor, title, ct)
+    print(usr, monitor, title, ct, file=z)
+    print(usr, monitor, title, ct, file=c)
+    print()
+    print(file=z)
+    print("*this saves to call-logs.txt* Ctrl+C to stop")
+    print()
+    print(file=c)
+    def generate_random_result():
+        ctm = datetime.datetime.now()
+        def generate_random_letters():
+            random1 = random.choice(string.ascii_letters)
+            random2 = random.choice(string.ascii_letters)
+            random3 = random.choice(string.ascii_letters)
+            letters = [random1, random2, random3]
+            return letters
+        random_letters = generate_random_letters()
+        sitch  = (round(random.random()*9999,4))
+        kchat = random.sample(nano, random.randint(1,7))
+        print(maroon, random_letters, sitch, kchat, ctm)
+        print(maroon, random_letters, sitch, kchat, ctm, file=c)
+        random_result = [random.choice(nano)]
+        result_text = ", ".join(random_result)
+        speak(result_text)
+        print()
+        print(file=c)
+    
+    def main_loop():
+        while True:
+            time.sleep(random.randint(0,5))
+            integer = (round(random.random()*25))
+            if integer > 15:
+                if random.choice([True, False]):
+                    generate_random_result()
 
+    if __name__ == "__main__":
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
+def degree():
+    while True:
+        try:
+            number = int(input("Indicate number of (degree/major) results: "))
+        except ValueError:
+            print("Invalid value")
+        else:
+            break
+    number
+    time.sleep(1)
+    print()
+    degrees = ["Acting", "Actuarial Foundations", "Actuarial Science", "Administrative Sciences", "Administrative Sciences", "Advanced Information Technology", "Advertising", "African American & Black Diaspora Studies", "African American Studies", "African Languages & Literatures", "African Studies", "American & New England Studies", "American Law", "American Studies", "Anatomy & Neurobiology", "Ancient Greek", "Ancient Greek & Latin", "Ancient Greek/Literary Translation", "Anglican & Episcopal Studies", "Anthropology", "Anthropology with a Specialization in Anthropology, Health & Medicine", "Anthropology with a Specialization in Biological Anthropology", "Anthropology with a Specialization in Sociocultural Anthropology", "Anthropology & Religion", "Applied Biomechanics", "Applied Biostatistics", "Applied Business Analytics", "Applied Data Analytics", "Applied Human Development", "Arabic", "Archaeological & Environmental Sciences", "Archaeological & Environmental Sciences/Archaeology", "Archaeology", "Architectural Studies", "Art", "Art Education", "Art Education with Initial License", "Art History", "Art & Architecture, History of", "Artificial Intelligence", "Arts Administration", "Arts Leadership", "Arts Management", "Arts Marketing", "Asian Legal Studies", "Asian Studies", "Astronomy", "Astronomy & Physics", "Astrophysics & Space Physics", "Autism Spectrum Disorders", "Autism & Emotional/Behavioral Disorders", "Banking & Financial Law", "Behavior & Health", "Behavioral Neuroscience", "Bilingual Education/Teaching English to Speakers of Other Languages", "Biochemistry", "Biochemistry & Molecular Biology; Biotechnology", "Bioimaging", "Bioinformatics", "Bioinformatics", "Biology", "Biology with a Specialization in Behavioral Biology", "Biology with a Specialization in Cell Biology, Molecular Biology & Genetics", "Biology with a Specialization in Ecology & Conservation Biology", "Biology with a Specialization in Neurobiology", "Biology Education", "Biomedical Engineering", "Biomedical Forensic Sciences", "Biomedical Research Technologies", "Biomedical Sciences", "Biostatistics", "Business Administration", "Business Administration & Law", "Business Administration & Management", "Business Administration & Medicine", "Business Administration & Public Health", "Business Analytics", "Chemistry", "Chemistry & Physics", "Chemistry: Biochemistry", "Chemistry: Chemical Biology", "Teaching of Chemistry", "Child Life & Family-Centered Care", "Chinese", "Chinese Language & Literature", "Chinese/Literary Translation", "Chronic & Non-Communicable Diseases", "Cinema & Media Production", "Cinema & Media Studies", "City Planning", "Civic Science Communication", "Classical Civilization", "Classical Studies", "Classical Studies/Philosophy", "Classics & Archaeology", "Classics & Philosophy", "Classics & Religion", "Climate Change and Health", "Clinical Research", "Cognitive & Neural Systems", "Commercial Theater Development", "Community Assessment, Program Design, Implementation & Evaluation", "Comparative Literature", "Comparative Literature/Literary Translation", "Composition", "Composition & Music Theory", "Computer Engineering", "Computer Information Systems", "Computer Networks", "Computer Science & Economics", "Computer Science", "Computing & Data Sciences", "Conducting", "Core Curriculum", "Core Independent Studies", "Corporate Finance", "Costume Design & Production", "Counseling", "Counseling Psychology & Applied Human Development", "Creative Writing", "Criminal Justice", "Curriculum & Teaching", "Cybercrime Investigation & Cybersecurity", "Dance", "Data Analytics", "Data Science", "Database Management & Business Intelligence", "Deaf Education", "Deaf Studies", "Dental Biomaterials", "Dental Medicine", "Dental Public Health", "Dermatology", "Developmental Studies", "Directing", "Early Childhood Education", "Earth & Environment", "Earth & Environmental Sciences", "Economic Policy", "Economics", "Economics, Global Development", "Economics & Mathematics", "Economics & Mathematics/Economics", "Editorial Studies", "Education", "Education for Equity & Social Justice", "Education & Human Development", "Education & Human Development/Applied Human Development", "Education & Human Development/Educational Policy Studies", "Education & Human Development/TESOL & Applied Linguistics", "Education & Human Development/TESOL Multilingual Learner Education", "Educational Leadership & Policy Studies", "Educational Studies", "Electrical Engineering", "Electrical & Computer Engineering", "Elementary Education", "Emerging Media Studies", "Emotional & Behavioral Challenges in Schools", "Endodontics", "Energy & Environment", "Engineering Science", "English", "English & American Literature", "English & Law", "English Education", "Enterprise Risk Management", "Enterprise Risk Management & Compliance", "Environmental Analysis & Policy", "Environmental Health", "Environmental Remote Sensing & GIS", "Epidemiology", "Epidemiology & Biostatistics", "Estate Planning", "Esthetic, Digital, and Operative Dentistry", "European Law", "European Studies", "Evangelism", "Event Management", "Event Management & Public Relations", "Faith & Ecological Justice", "Film", "Film & Television", "Film & Television Studies", "Finance", "Financial Management", "Financial Planning", "Financial Services Compliance", "Financial Technology", "Forensic Anthropology", "Foundations of Health Communication", "French & Linguistics", "French Language & Literature", "French Studies", "French Studies/French Language & Literature", "French Studies/Literary Translation", "Gastronomy", "Genealogical Research", "General Science Education", "Genetic Counseling", "Genetic Counseling/Master of Public Health", "Genetics & Genomics", "Geoarchaeology", "Geriatric Dental Medicine", "German", "German Language & Literature", "German/Literary Translation", "Global Education Leadership Program", "Global Health", "Global Health Program Design, Monitoring & Evaluation", "Global Marketing Management", "Global Medieval Studies", "Global Policy", "Graphic Design", "Greek—Ancient", "Greek—Modern", "Health Care Emergency Management", "Healthcare Management", "Healthcare Promotion, Media & Marketing", "Health Communication", "Health Communication & Promotion", "Health Equity", "Health Informatics", "Health Policy & Law", "Health Professions Education", "Health Science", "Health Services & Policy Research", "Hebrew", "Higher Education Leadership", "Hindi-Urdu", "Hispanic Language & Literatures", "Historical Performance", "History", "History of Art & Architecture", "History & Law", "Holocaust, Genocide & Human Rights Studies", "Hospitality", "Hospitality Administration", "Hospitality Administration & Gastronomy", "Hospitality & Communication", "Hospitality Management", "Hospitality Management (Advanced)", "Human Development & Education", "Human Physiology", "Human Resources Management", "Human Rights & Social Justice", "Immunology Training", "Independent Major", "Infectious Disease", "Information Security", "Information Technology", "Information Technology Project Management", "Innovation & Entrepreneurship", "Insurance Management", "Intellectual Property & Information Law", "Interdisciplinary Studies", "International Business Law", "International & European Business Law", "International Affairs", "International Business Management", "International Commercial & Investment Arbitration", "International Finance", "International Relations", "International Relations/International Affairs", "International Relations & Business Administration", "International Relations & Law", "Investment Analysis", "Italian", "Italian & Linguistics", "Italian Studies", "Japanese & Linguistics", "Japanese Language & Literature", "Japanese/Literary Translation", "Jewish Studies", "Journalism", "Korean Language & Literature", "Korean", "Language & Literacy Education", "Latin", "Latin American Studies", "Latin/Literary Translation", "Law", "Law—American", "Law—Asian Legal Studies", "Law—Banking & Financial", "Law—European", "Law—Intellectual Property & Information", "Law—International Business", "Law—Taxation", "Law & Business Administration", "Law & English", "Law & History", "Law & International Relations", "Law & Philosophy", "Law & Preservation Studies", "Law & Public Health", "Leadership, Policy & Advocacy for Early Childhood Well-Being", "Lighting Design", "Linguistics", "Linguistics & African Languages", "Linguistics & Computer Science", "Linguistics & Philosophy", "Linguistics and Speech, Language & Hearing Sciences", "Linguistics and Speech, Language & Hearing Sciences", "Literacy Instruction & Intervention", "Literary Translation", "Management Studies", "Management Studies", "Marine Science", "Materials Science & Engineering", "Maternal & Child Health", "Mathematical Finance", "Mathematical Finance & Financial Technology", "Mathematics (includes Statistics)", "Mathematics", "Mathematics/Biostatistics", "Mathematics & Computer Science", "Mathematics & Mathematics Education", "Mathematics & Philosophy", "Mathematics & Physics", "Mathematics Education", "Mechanical Engineering", "Media Science", "Media Ventures", "Medical Anthropology", "Medical Anthropology & Cross-Cultural Practice", "Medical Sciences", "Medical Sciences and Mental Health Counseling & Behavioral Medicine", "Medical Sciences & Public Health", "Medicine", "Medicine & Law", "Medicine/Business Administration", "Medicine & Public Health", "Early Medical School Selection Program", "Mental Health & Substance Use", "Mental Health Counseling & Behavioral Medicine", "Microbiology", "Middle East & North Africa Studies", "Middle Eastern and South Asian Languages & Literatures", "Modern Foreign Language Education", "Modern Greek", "Modular Medical/Dental Integrated Curriculum", "Molecular Biology, Cell Biology & Biochemistry", "Molecular Medicine", "Museum Education", "Museum Studies", "Music", "Musicology", "Music Education", "Music Ministry", "Music Performance", "Music Theory", "Muslim Cultures", "Muslim Societies", "Muslim Studies", "Myth Studies", "Neuroscience", "Neuroscience & Computational Neuroscience", "Nutrition", "Nutrition/Dietetics", "Nutrition & Metabolism", "Occupational Therapy", "Opera", "Oral Biology", "Oral Health Sciences", "Oral & Maxillofacial Surgery", "Orofacial & Skeletal Biology", "Orthodontics & Dentofacial Orthopedics", "Painting", "Paralegal Studies", "Path 2 Path Program", "Pathology & Laboratory Medicine", "Pediatric Dentistry", "Performance, Music", "Periodontology", "Persian Cultural Studies", "Pharmaceutical Development, Delivery & Access", "Pharmacology & Experimental Therapeutics", "Philosophy", "Philosophy & Neuroscience", "Philosophy & Physics", "Philosophy & Political Science", "Philosophy & Psychology", "Philosophy & Religion", "Physical Therapy", "Physician Assistant Program", "Physics", "Physics & Computer Science", "Physics Education", "Physiology or Biophysics", "Playwriting", "Political Science", "Population Health Research", "Portuguese & Brazilian Cultural Studies", "Premedical Studies", "Preservation Studies", "Printmaking", "Print Media & Photography", "Product Design & Manufacture", "Production Management", "Professional Fundraising", "Program Management", "Project Management", "Project, Program & Portfolio Management", "Prosthodontics", "Psychology", "Public Anthropology", "Public Health", "Public Health & Genetic Counseling", "Public Health & Law", "Public Health & Management", "Public Health & Medical Sciences", "Public Health & Medicine", "Public Health & Social Work", "Public Policy Analysis", "Public Relations", "Reading Education", "Real Estate", "Rehabilitation Sciences", "Religion", "Religion & Public Leadership", "Religion in Science & Medicine", "Religious Education", "Religious Studies", "Remote Sensing & Geospatial Sciences", "Robotics & Autonomous Systems", "Russian", "Russian Language & Literature", "Scene Design", "Scene Painting", "Science Education", "Screenwriting", "Sculpture", "Sex, Sexuality & Gender", "Social Studies Education", "Social Work, Clinical Practice", "Social Work, Macro Practice", "Social Work", "Sociology", "Sociology & Social Work", "Social Work & Education", "Social Work & Public Health", "Social Work & Theology", "Software Development", "Sound Design", "Spanish", "Spanish & Linguistics", "Spanish/Literary Translation", "Special Education", "Speech, Language & Hearing Sciences", "Speech-Language Pathology", " Spirituality Studies", "Stage Management", "Statistical Practice", "Statistics", "Statistics & Computer Science", "Strategic Management in Criminal Justice", "Supply Chain Management", "Sustainable Energy", "Systems Engineering", "Tax Law", "Teaching English to Speakers of Other Languages", "Teaching Language, Literature & Film", "Teaching Science Education", "Teaching Students with Moderate Disabilities", "Teaching Students with Severe Disabilities", "Teaching Writing", "Technical Production", "Telecommunication", "Television", "Theatre Arts", "Theatre Education", "Theatre–Stage Management", "Theatre–Technical Production", "Theology", "Theology & Latinx Studies", "Theology & Social Work", "Theology—Divinity & Sacred Music", "Theology—Sacred Music", "Theology—Sacred Theology", "Theology—Theological Studies", "Theology—Transformational Leadership", "Transactional Skills", "Turkish Cultural Studies", "Urban Affairs", "Urban Policy & Planning", "Urban Studies", "Visual Arts", "Visual & Digital Health Communication", "Visual Narrative", "Web Application Development", "Women’s, Gender & Sexuality Studies", "World Language Education"]
+    degree = random.sample(degrees, number)
+    value = (round(random.random()*9999,4))
+    d = "degree/major:"
+    bu = "-from Boston University website (bu.edu)"
+    ct = datetime.datetime.now()
+    print(d, value, degree, ct)
+    print(usr, d, value, degree, ct, file=z)
+    print()
+    print(file=z)
+    print(bu)
+    print(bu, file=z)
 
 def choice():
     choice = ''
-    while choice !='pray' and choice !='slot' and choice !='search for items' and choice !='surf' and choice !='sleep' and choice !='eat' and choice !='meditate' and choice !='find coins' and choice !='draw card' and choice !='fly' and choice !='drink coffee' and choice !='drink tea' and choice !='surf' and choice !='dhammapada' and choice !='skate' and choice !='art' and choice !='give alms' and choice !='radio' and choice !='hack' and choice !='message' and choice !='brawl' and choice !='souls'and choice !='hipster tarot' and choice !='mp3' and choice !='spar' and choice !='train' and choice !='rest' and choice !='psalms' and choice !='haiku' and choice !='muslim prayer' and choice !='karate' and choice !='koans' and choice !='equips' and choice !='rpg' and choice !='archery' and choice !='color key' and choice !='doodling' and choice !='BUMP' and choice !='MA' and choice !='Magic' and choice !='commands' and choice !='ascii' and choice !='zen melody' and choice !='monopoly' and choice !='light incense' and choice  !='stats' and choice !='prayer' and choice !='progress' and choice !='collections' and choice !='football' and choice !='map' and choice !='search' and choice !='print time' and choice !='entry' and choice !='posting' and choice !='koran' and choice !='heBrews' and choice !='Medicals' and choice !='M' and choice !='Clearance' and choice !='MiCasa' and choice !='stuff' and choice !='worship' and choice !='Earth Science' and choice !='SCI' and choice !='value' and choice !='psychology' and choice !='psyc' and choice !='Patient Simu' and choice !='biology' and choice !='B' and choice !='legal terms' and choice !='Law' and choice !='the heart sutra' and choice !='License' and choice !='climb' and choice !='chemistry' and choice !='ch' and choice !='weapon start' and choice !='wstart' and choice !='note' and choice !='save' and choice !='journal' and choice !='version' and choice !='ai' and choice !='auto-mat' and choice !='AAM' and choice !='ID' and choice !='IDC' and choice !='echo' and choice !='monitor-start' and choice !='mstart' and choice !='fuzz' and choice !='message-scan' and choice !='scan' and choice !='monitor-search' and choice !='msearch' and choice !='tag' and choice !='atag' and choice !='a-tag' and choice !='acad-monitor' and choice !='astart' and choice !='acad-search' and choice !='asearch' and choice !='oscillator' and choice !='oscillate' and choice !='oscill' and choice !='amror' and choice !='game' and choice !='amsearch' and choice !='amror-search' and choice !='amror search' and choice !='herbs' and choice !='herbals' and choice !='MedProc AI' and choice !='MAI' and choice !='frames' and choice !='fsearch' and choice !='ascsearch' and choice !='alerts' and choice !='Alerts' and choice !='burner-start' and choice !='burner start' and choice !='burner' and choice !='burn' and choice !='kiomai' and choice !='KIOMAI' and choice !='time-monitor':
+    while choice !='pray' and choice !='slot' and choice !='search for items' and choice !='surf' and choice !='sleep' and choice !='eat' and choice !='meditate' and choice !='find coins' and choice !='draw card' and choice !='fly' and choice !='drink coffee' and choice !='drink tea' and choice !='surf' and choice !='dhammapada' and choice !='skate' and choice !='art' and choice !='give alms' and choice !='radio' and choice !='hack' and choice !='message' and choice !='brawl' and choice !='souls'and choice !='hipster tarot' and choice !='mp3' and choice !='spar' and choice !='train' and choice !='rest' and choice !='psalms' and choice !='haiku' and choice !='muslim prayer' and choice !='karate' and choice !='koans' and choice !='equips' and choice !='rpg' and choice !='archery' and choice !='color key' and choice !='doodling' and choice !='BUMP' and choice !='MA' and choice !='Magic' and choice !='commands' and choice !='ascii' and choice !='zen melody' and choice !='monopoly' and choice !='light incense' and choice  !='stats' and choice !='prayer' and choice !='progress' and choice !='collections' and choice !='football' and choice !='map' and choice !='search' and choice !='print time' and choice !='entry' and choice !='posting' and choice !='koran' and choice !='heBrews' and choice !='Medicals' and choice !='M' and choice !='Clearance' and choice !='MiCasa' and choice !='stuff' and choice !='worship' and choice !='Earth Science' and choice !='SCI' and choice !='value' and choice !='psychology' and choice !='psyc' and choice !='Patient Simu' and choice !='biology' and choice !='B' and choice !='legal terms' and choice !='Law' and choice !='the heart sutra' and choice !='License' and choice !='climb' and choice !='chemistry' and choice !='ch' and choice !='weapon start' and choice !='wstart' and choice !='note' and choice !='save' and choice !='journal' and choice !='version' and choice !='ai' and choice !='auto-mat' and choice !='AAM' and choice !='ID' and choice !='IDC' and choice !='echo' and choice !='monitor-start' and choice !='mstart' and choice !='fuzz' and choice !='message-scan' and choice !='scan' and choice !='monitor-search' and choice !='msearch' and choice !='tag' and choice !='atag' and choice !='a-tag' and choice !='acad-monitor' and choice !='astart' and choice !='acad-search' and choice !='asearch' and choice !='oscillator' and choice !='oscillate' and choice !='oscill' and choice !='amror' and choice !='game' and choice !='amsearch' and choice !='amror-search' and choice !='amror search' and choice !='herbs' and choice !='herbals' and choice !='MedProc AI' and choice !='MAI' and choice !='frames' and choice !='fsearch' and choice !='ascsearch' and choice !='alerts' and choice !='Alerts' and choice !='burner-start' and choice !='burner start' and choice !='burner' and choice !='burn' and choice !='kiomai' and choice !='KIOMAI' and choice !='time-monitor' and choice !='degree' and choice !='major' and choice !='degrees' and choice !='majors':
         print()
         print(file=z)
         choice = input(usr)
@@ -3956,9 +4026,6 @@ def choice():
         if choice == "weapon start" or choice == "wstart":
             weapon_start()
 
-        if choice == "call":
-            call()
-
         if choice == "monitor-start" or choice == "mstart":
             monitor_start()
 
@@ -4010,6 +4077,12 @@ def choice():
         if choice == "burner-start" or choice == "burner start" or choice == "burner" or choice == "burn" or choice == "Burn":
             burner()
 
+        if choice == "call":
+            call()
+
+        if choice == "degree" or choice == "degrees" or choice == "major" or choice == "majors" or choice == "subjects":
+            degree()
+
 chooseAgain = "yes"
 while chooseAgain:
     choice()
@@ -4020,6 +4093,7 @@ m.close()
 a.close()
 b.close()
 x.close()
+c.close()
 t.close()
 
 
